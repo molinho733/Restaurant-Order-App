@@ -20,16 +20,47 @@
           <h1><a href="#">Jimmy's Diner</a></h1>
           <h2><a href="#">The best burgers and pizzas in town.</a></h2>
         </div>
-        <img src="img/bg-restaurant-img.jpg" alt="picture of a Meal" />
+        <img src="https://images.unsplash.com/photo-1498654896293-37aacf113fd9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="picture of a Meal" />
       </header>
       <main>
-        <div id="dish">
+        <div id="menu">
           <!-- JS menu component here -->
         </div>
-        <div id="order">
+        <div id="order" class="hidden">
           <!-- JS order component here -->
         </div>
+        <div id="order-confirmation" class="hidden">
+          <!-- JS order-confirmation component here -->
+        </div>
       </main>
+      <div class="modal hidden">
+           <form id="payment-form">
+                <h1>Enter card details</h1>
+                <input 
+                    type="text" 
+                    id="form-name" 
+                    name="name" 
+                    placeholder="Enter your name" 
+                    required>
+                <input 
+                    type="number" 
+                    id="card-number" 
+                    name="card-number" 
+                    placeholder="Enter card number"
+                    required>
+                <input 
+                    type="number" 
+                    id="cvv-number" 
+                    name="cvv" 
+                    placeholder="Enter CVV" 
+                    required>
+                <input 
+                    type="submit" 
+                    id="pay-btn" 
+                    name="pay-btn" 
+                    value="Pay">
+            </form>
+        </div>
     </div>
     <script src="index.js" type="module"></script>
   </body>
